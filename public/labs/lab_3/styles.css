@@ -59,14 +59,14 @@
     border: 1px solid #ccc;
     margin: 50px auto;
   }
-  div.galery {
+  div.gallery {
     position: absolute;
     width: 390px;
     top: 11px;
     left: 50px;
     overflow: hidden; 
   }
-  div.galery > ul {
+  div.gallery > ul {
     width: 9999px; 
     margin: 0;
     padding: 0;
