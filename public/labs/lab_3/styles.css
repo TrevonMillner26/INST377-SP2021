@@ -59,18 +59,3 @@
     border: 1px solid #ccc;
     margin: 50px auto;
   }
-  div.gallery {
-    position: absolute;
-    width: 390px;
-    top: 11px;
-    left: 50px;
-    overflow: hidden; 
-  }
-  div.gallery > ul {
-    width: 9999px; 
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 0;
-    transition: transform 0.35s ease-in-out;
-  }
