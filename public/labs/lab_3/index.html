@@ -5,36 +5,14 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trevon Millner's Lab 3 Carousel</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<button> class ="arrow"> <---</button>
-<button>class ="arrow"> ---> </button>
-
-<ul>
-    <li><img src="onigiri_1.png"></li>
-    <li><img src="onigiri_2.png"></li>
-    <li><img src="onigiri_3.png"></li>
-    <li><img src="onigiri_4.png"></li>
-    <li><img src="roll_1.png"></li>
-    <li><img src="roll_2.png"></li>
-    <li><img src="roll_3.png"></li>
-</ul>
-
-<script>
-    // label the images to visually track them, just for convenience,
-    // this code can be removed
-    let i = 1;
-    for(let li of carousel.querySelectorAll('li')) {
-      li.style.position = 'relative';
-      li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
-      i++;
-    }
-
-    // ...your code to make carousel alive!
-  </script>
-
+  <div class = "main" id = "carousel1">Mochi Carousel</div>
 </body>
+<script src = "script.js"></script>
 </html>
