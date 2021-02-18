@@ -26,3 +26,11 @@
     letter-spacing: .09em;
     border-radius: 2px;
 }
+
+.flex-inner li {
+    width: 100px;
+}
+
+.flex-inner {
+    width: 25%;
+}
