@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded' , () => {
     let birdLeft = 220
     let birdBottom = 100
     let gravity = 2
+    let isGameOver = false
     
     function startGame() {
         birdBottom -= gravity
         bird.style.bottom = birdBottom + 'px'
         bird.style.left = birdLeft + 'px'
     }
-    let timerID = setInterval(startGame, 20)
+    let gameTimerID = setInterval(startGame, 20)
 
 
     function control(e) {
@@ -42,12 +43,26 @@ document.addEventListener('DOMContentLoaded' , () => {
         function moveObstacle() {
             obstacleLeft -= 2
             obstacle.style.left = obstacleLeft + 'px'
+
+            if (obstacleLeft === -60) {
+                clearInterval(timerID)
+                gameDisplay.removeChild(obstacle)
+            }
+            if (birdBottom === 0) {
+                gameOver()
+            }
         }
         let timerID = setInterval(moveObstacle, 20)
+        setTimeout(generateObstacle, 3000)
     }
     generateObstacle()
 
 
+    function gameOver() {
+        clearInterval(gameTimerID)
+        isGameOver = true
+        document.removeEventListener('keyup', control)
+    }
 
 
 })
