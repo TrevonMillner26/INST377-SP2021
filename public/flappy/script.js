@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         bird.style.bottom = birdBottom + 'px'
         bird.style.left = birdLeft + 'px'
     }
-    let gameTimerID = setInterval(startGame, 20)
+    let gameTimerId = setInterval(startGame, 20)
 
 
     function control(e) {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded' , () => {
 
 
     function gameOver() {
-        clearInterval(gameTimerID)
+        clearInterval(gameTimerId)
         isGameOver = true
         document.removeEventListener('keyup', control)
     }
