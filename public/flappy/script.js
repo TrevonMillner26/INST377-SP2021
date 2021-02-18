@@ -15,9 +15,22 @@ document.addEventListener('DOMContentLoaded' , () => {
     let timerID = setInterval(startGame, 20)
 
 
-    function jump() {
-        birdBottom += 50
-        bird.style.bottom = birdBottom + 'px'
+    function control(e) {
+        if (e.keyCode === 32) {
+            jump()
+        }
     }
-    document.addEventListener('keyup', jump)
+
+    function jump() {
+        if (birdBottom < 500) birdBottom += 50
+        bird.style.bottom = birdBottom + 'px'
+        console.log(birdBottom)
+    }
+    document.addEventListener('keyup', control)
+
+
+
+
+
+    
 })
