@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded' , () => {
                 birdBottom === 0
                 ) {
                 gameOver()
+                clearInterval(timerID)
             }
         }
         let timerID = setInterval(moveObstacle, 20)
