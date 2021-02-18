@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     
     function startGame() {
         bird.style.bottom = birdBottom + 'px'
+        bird.style.left = birdLeft + 'px'
     }
     startGame()
 
