@@ -1,4 +1,4 @@
-const { startCase } = require("cypress/types/lodash")
+//const { startCase } = require("cypress/types/lodash")
 
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid')
