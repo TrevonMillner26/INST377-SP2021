@@ -30,6 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    function fall() {
+        clearInterval(upTimerId)
+        downTimerId = setInterval(function () {
+            doodlerBottomSpace -= 5
+            doodler.style.bottom = doodlerBottomSpace + 'px'
+            if (doodlerBottomSpace <= 0) {
+                gameOver()
+            }
+            platforms.forEach(platform => {
+                if (
+                    (doodlerBottomSpace >= platform.bottom) &&
+                    (doodlerBottomSpace <= (platform.bottom + 15)) &&
+                    ((doodlerLeftSpace + 60) >= platform.left) && 
+                    (doodlerLeftSpace <= (platform.left + 85)) &&
+                    !isJumping
+                    ) {
+                        console.log('tick')
+                        startPoint = doodlerBottomSpace
+                        jump()
+                        console.log('start', startPoint)
+                        isJumping = true
+                    }
+            })
+        },20)
+    }
+
     class Platform {
         constructor(newPlatBottom) {
             this.left = Math.random() * 315
@@ -140,35 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
       moveStraight()
     }
   }
-
-
-
-    
-    function fall() {
-        clearInterval(upTimerId)
-        downTimerId = setInterval(function () {
-            doodlerBottomSpace -= 5
-            doodler.style.bottom = doodlerBottomSpace + 'px'
-            if (doodlerBottomSpace <= 0) {
-                gameOver()
-            }
-            platforms.forEach(platform => {
-                if (
-                    (doodlerBottomSpace >= platform.bottom) &&
-                    (doodlerBottomSpace <= (platform.bottom + 15)) &&
-                    ((doodlerLeftSpace + 60) >= platform.left) && 
-                    (doodlerLeftSpace <= (platform.left + 85)) &&
-                    !isJumping
-                    ) {
-                        console.log('tick')
-                        startPoint = doodlerBottomSpace
-                        jump()
-                        console.log('start', startPoint)
-                        isJumping = true
-                    }
-            })
-        },20)
-    }
 
     function gameOver() {
         isGameOver = true
