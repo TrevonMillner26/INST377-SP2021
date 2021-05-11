@@ -1,5 +1,6 @@
 body{
     background: darkslategrey;
+    align-items: center;
 }
 
 ul.flex-outer{
