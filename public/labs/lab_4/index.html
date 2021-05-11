@@ -7,8 +7,9 @@
     <title>Trevon Millner's Lab 4</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<h1>Trevon Millner's Lab 4</h1>
+
 <body>
+    <h1 class="title">Trevon Millner's Lab 4</h1>
     <form>
         <ul class="flex-outer">
             <li>
@@ -34,26 +35,30 @@
             <li>
                 <p>Age</p>
                 <ul class="flex-inner">
-                <!--more list items here-->
+                    <li>
+                        <input type="checkbox" id="eighteen-to-twentyfive" name="eighteen-to-twentyfive"/>
+                        <label for="eighteen-to-twentyfive">18-25</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="thirtyfive-to-fifty" name="thirtyfive-to-fifty"/>
+                        <label for="thirtyfive-to-fifty">35-50</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="fiftyfive-to-sixtyfive" name="fiftyfive-to-sixtyfive"/>
+                        <label for="fiftyfive-to-sixtyfive">55-65</label> 
+                    </li>
+                    <li>
+                        <input type="checkbox" name="other" id="other"/>
+                        <label for="other">Other</label>
+                    </li>
+
                 </ul>
             </li>
             <li>
                 <button type="submit">Submit</button>
             </li>
         </ul>
-    <ul class="flex-inner">
-        <li>
-            <input type="checkbox" id="eighteen-to-twentyfive">
-            <label for="eighteen-to-twentyfive">18-25</label>
-        </li>
-        <li>
-            <input type="checkbox" id="thirtyfive-to-fifty">
-            <label for="thirtyfive-to-fifty">35-50</label>
-        </li>
-        <li>
-            <input type="checkbox" id="fifty-to-sixtyfive">
-            <label for="fifty-to-sixtyfive">50-65</label>
-        </li>
-    </ul>
+    </form>
 </body>
+
 </html>
